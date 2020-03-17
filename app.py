@@ -18,8 +18,10 @@ def generate_chords():
 
     markovchain = MarkovChord(chord_list)
 
+    chords_as_list = markovchain.walk(10).split()
 
-    return render_template('home.html', chords=markovchain.walk(10))
+    return render_template('home.html', chords=chords_as_list)
+    #chords=markovchain.walk(10)
 
 
 
