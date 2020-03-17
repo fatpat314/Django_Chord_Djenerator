@@ -1,11 +1,12 @@
-from flask import Flask
+from flask import Flask, render_template
 from sample import sample_by_frequency
 from markov_chord import MarkovChord
 
 app = Flask(__name__)
 
+
 @app.route('/')
-def generate_words():
+def generate_chords():
     my_file = open("./chord_list.txt")
     lines = my_file.readlines()
 
@@ -17,7 +18,16 @@ def generate_words():
 
     markovchain = MarkovChord(chord_list)
 
-    return markovchain.walk(10)
+
+    return render_template('home.html', chords=markovchain.walk(10))
+
+
+
+
+
+
+
+
 
 
 if __name__ == '__main__':
