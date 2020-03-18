@@ -6,8 +6,8 @@ from chord_Generator.markov_chord import MarkovChord
 
 
 # @app.route('/')
-def generate_chords():
-    my_file = open("chord_Generator/chord_list.txt")
+def generate_chords(key):
+    my_file = open(key) #make this based off the slug
     lines = my_file.readlines()
 
     chord_list = []

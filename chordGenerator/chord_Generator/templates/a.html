@@ -1,0 +1,31 @@
+<!doctype html>
+{% extends 'base.html' %}
+
+{% block content %}
+
+<script async type="text/javascript" src="https://www.scales-chords.com/api/scales-chords-api.js"></script>
+
+<h1>{{ chords }}</h1>
+
+
+
+{% for chord in chords %}
+
+
+        <br>
+        <h1>{{ chord }}</h1>
+        <ins class="scales_chords_api" chord="{{ chord }}" instrument="piano" output="image" nolink="false"></ins>
+
+        <ins class="scales_chords_api" chord="{{ chord }}" instrument="piano" output="sound" nolink="false"></ins>
+        <br>
+
+
+
+{% endfor %}
+
+
+
+
+
+
+{% endblock %}

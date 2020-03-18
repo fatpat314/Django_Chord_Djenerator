@@ -11,8 +11,16 @@ from chord_Generator.app import generate_chords
 class ChordView(ListView):
     model = Chords
 
-
     def get(self,request):
-        chord = generate_chords()
+        key = "chord_Generator/chord_list.txt"
+        chord = generate_chords(key)
         chords = chord
         return render(request, '/Users/patrickkelly/Desktop/Projects_2020/spring_intensive/chordGenerator/chord_Generator/templates/home.html',{'chords' : chords})
+
+class KeyView(ListView):
+    model = Chords
+    def get(self,request):
+        key = "chord_Generator/A.txt"
+        chord = generate_chords(key)
+        chords = chord
+        return render(request, '/Users/patrickkelly/Desktop/Projects_2020/spring_intensive/chordGenerator/chord_Generator/templates/a.html',{'chords' : chords})
