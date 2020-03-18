@@ -23,14 +23,5 @@ def generate_chords():
     return chords_as_list
     #chords=markovchain.walk(10)
 
-
-
-
-
-
-
-
-
-
 # if __name__ == '__main__':
     # app.run()

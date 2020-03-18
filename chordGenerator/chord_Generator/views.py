@@ -11,7 +11,7 @@ from chord_Generator.app import generate_chords
 class ChordView(ListView):
     model = Chords
 
-    
+
     def get(self,request):
         chord = generate_chords()
         chords = chord

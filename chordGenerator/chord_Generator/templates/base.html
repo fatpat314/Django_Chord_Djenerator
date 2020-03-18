@@ -18,22 +18,37 @@
     <link rel="stylesheet" href="styles.css">
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-          <a class="navbar-brand" href="/"><i class="fas fa-fw fa-book"></i> Event Planner</a>
+          <a class="navbar-brand" href="/"><i class="fas fa-fw fa-book"></i> Django Chord Djenerator</a>
           <form class="form-inline ml-auto">
             {% if user.is_authenticated %}
-            <div class="text-white">Hello, <strong></strong>!</div>
+            <div class="text-white">Hello, Choose a key <strong></strong> </div>
+
+            <br>
+
             {% else %}
-            <div class="text-white">Hello!</div>
+            <div class="text-white">Hello! Choose a key </div>
+
             {% endif %}
-            <a href="/" class="btn btn-warning ml-4">Events</a>
-            <a href="" class="btn btn-warning ml-4">Menu</a>
+            <a href="A" class="btn btn-primary ml-4">A</a>
+            <a href="" class="btn btn-secondary ml-4">A#/Bb</a>
+            <a href="" class="btn btn-primary ml-4">B</a>
+            <a href="" class="btn btn-primary ml-4">C</a>
+            <a href="" class="btn btn-secondary ml-4">C#/Db</a>
+            <a href="" class="btn btn-primary ml-4">D</a>
+            <a href="" class="btn btn-secondary ml-4">D#/Eb</a>
+            <a href="" class="btn btn-primary ml-4">E</a>
+            <a href="" class="btn btn-primary ml-4">F</a>
+            <a href="" class="btn btn-secondary ml-4">F#/Gb</a>
+            <a href="" class="btn btn-primary ml-4">G</a>
+            <a href="" class="btn btn-secondary ml-4">G#/Ab</a>
             {% if user.is_authenticated %}
 
             <a href="" class="btn btn-danger ml-2">Log Out</a>
             {% else %}
-            <a href="" class="btn btn-secondary ml-2">Log In</a>
+            <a href="" class="btn btn-danger ml-2">Log In</a>
             <a href="" class="btn btn-primary ml-2">Sign Up</a>
             {% endif %}
+
           </form>
         </nav>
     {% block content %}
