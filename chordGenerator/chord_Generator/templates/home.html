@@ -8,20 +8,17 @@
 <h1>{{ chords }}</h1>
 
 
+<div class="row">
+
 
 {% for chord in chords %}
-
-
-        <br>
-        <h1>{{ chord }}</h1>
-        <ins class="scales_chords_api" chord="{{ chord }}" instrument="piano" output="image" nolink="false"></ins>
-
-        <ins class="scales_chords_api" chord="{{ chord }}" instrument="piano" output="sound" nolink="false"></ins>
-        <br>
-
-
-
+        <div class="col-sm-3">
+        {% include "partials/card.html" %}
+        </div>
 {% endfor %}
+
+
+</div>
 
 
 

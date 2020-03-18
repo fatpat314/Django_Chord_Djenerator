@@ -18,7 +18,7 @@ def generate_chords(key):
 
     markovchain = MarkovChord(chord_list)
 
-    chords_as_list = markovchain.walk(10).split()
+    chords_as_list = markovchain.walk(12).split()
 
     return chords_as_list
     #chords=markovchain.walk(10)

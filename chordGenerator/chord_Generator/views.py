@@ -12,15 +12,23 @@ class ChordView(ListView):
     model = Chords
 
     def get(self,request):
-        key = "chord_Generator/chord_list.txt"
+        key = "chord_Generator/keys/chord_list.txt"
         chord = generate_chords(key)
         chords = chord
         return render(request, '/Users/patrickkelly/Desktop/Projects_2020/spring_intensive/chordGenerator/chord_Generator/templates/home.html',{'chords' : chords})
 
-class KeyView(ListView):
+class KeyView_A(ListView):
     model = Chords
     def get(self,request):
-        key = "chord_Generator/A.txt"
+        key = "chord_Generator/keys/F.txt"
         chord = generate_chords(key)
         chords = chord
-        return render(request, '/Users/patrickkelly/Desktop/Projects_2020/spring_intensive/chordGenerator/chord_Generator/templates/a.html',{'chords' : chords})
+        return render(request, '/Users/patrickkelly/Desktop/Projects_2020/spring_intensive/chordGenerator/chord_Generator/templates/home.html',{'chords' : chords})
+
+class KeyView_Bb(ListView):
+    model = Chords
+    def get(self,request):
+        key = "chord_Generator/keys/A#Bb.txt"
+        chord = generate_chords(key)
+        chords = chord
+        return render(request, '/Users/patrickkelly/Desktop/Projects_2020/spring_intensive/chordGenerator/chord_Generator/templates/home.html',{'chords' : chords})
