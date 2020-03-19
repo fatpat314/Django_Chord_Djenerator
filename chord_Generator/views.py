@@ -15,7 +15,7 @@ class ChordAmountView(ListView):
         key = "chord_Generator/keys/chord_list.txt"
         chord = generate_chords(key)
         chords = chord
-        return render(request, '/Users/patrickkelly/Desktop/Projects_2020/spring_intensive/chord_Generator/templates/splash.html',{'chords' : chords})
+        return render(request, 'chord_Generator/templates/splash.html',{'chords' : chords})
 
 class KeyView_A(ListView):
     model = Chords
@@ -112,4 +112,3 @@ class KeyView_Ab(ListView):
         chord = generate_chords(key)
         chords = chord
         return render(request, '/Users/patrickkelly/Desktop/Projects_2020/spring_intensive/chord_Generator/templates/home.html',{'chords' : chords})
-        
