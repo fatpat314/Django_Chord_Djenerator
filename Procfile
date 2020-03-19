@@ -1,1 +1,1 @@
-web: gunicorn chord-generator-pk.wsgi --log-file -
+web: gunicorn chord-generator-pk:app --log-file -
