@@ -15,7 +15,7 @@ class ChordAmountView(ListView):
         key = "chord_Generator/keys/chord_list.txt"
         chord = generate_chords(key)
         chords = chord
-        return render(request, 'chord_Generator/templates/splash.html',{'chords' : chords})
+        return render(request, 'spring_intensive/chord_Generator/templates/splash.html',{'chords' : chords})
 
 class KeyView_A(ListView):
     model = Chords
