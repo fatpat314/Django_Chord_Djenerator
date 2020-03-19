@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+
 from chord_Generator.sample import sample_by_frequency
 from chord_Generator.markov_chord import MarkovChord
 
