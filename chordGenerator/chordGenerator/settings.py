@@ -25,7 +25,7 @@ SECRET_KEY = 'p7noy(%(lf3r7zx+r4mw7*+&-5^ye5!8z)f0$8+%dgp@6eh1iu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'chord-generator-pk.herokuapp.com']
 
 
 # Application definition
@@ -119,3 +119,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
