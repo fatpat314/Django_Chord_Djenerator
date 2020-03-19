@@ -4,7 +4,7 @@ from chord_Generator.views import ChordAmountView, KeyView_A, KeyView_Bb, KeyVie
 
 urlpatterns = [
     path('', ChordAmountView.as_view(), name='chords'),
-    path('A/', KeyView_A.as_view(), name='A'),
+    path('A/', KeyView_A.as_view(), name='/A'),
     path('Bb/', KeyView_Bb.as_view(), name='A#Bb'),
     path('B/', KeyView_B.as_view(), name='B'),
     path('C/', KeyView_C.as_view(), name='C'),
