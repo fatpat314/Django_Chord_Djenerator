@@ -15,7 +15,7 @@ class ChordAmountView(ListView):
         key = "chord_Generator/keys/chord_list.txt"
         chord = generate_chords(key)
         chords = chord
-        return render(request, 'spring_intensive/chord_Generator/templates/splash.html',{'chords' : chords})
+        return render(request, 'splash.html',{'chords' : chords})
 
 class KeyView_A(ListView):
     model = Chords
@@ -23,7 +23,7 @@ class KeyView_A(ListView):
         key = "chord_Generator/keys/A.txt"
         chord = generate_chords(key)
         chords = chord
-        return render(request, '/Users/patrickkelly/Desktop/Projects_2020/spring_intensive/chord_Generator/templates/home.html',{'chords' : chords})
+        return render(request, 'home.html',{'chords' : chords})
 
 class KeyView_Bb(ListView):
     model = Chords
@@ -31,7 +31,7 @@ class KeyView_Bb(ListView):
         key = "chord_Generator/keys/A#Bb.txt"
         chord = generate_chords(key)
         chords = chord
-        return render(request, '/Users/patrickkelly/Desktop/Projects_2020/spring_intensive/chord_Generator/templates/home.html',{'chords' : chords})
+        return render(request, 'home.html',{'chords' : chords})
 
 class KeyView_B(ListView):
     model = Chords
@@ -39,7 +39,7 @@ class KeyView_B(ListView):
         key = "chord_Generator/keys/B.txt"
         chord = generate_chords(key)
         chords = chord
-        return render(request, '/Users/patrickkelly/Desktop/Projects_2020/spring_intensive/chord_Generator/templates/home.html',{'chords' : chords})
+        return render(request, 'home.html',{'chords' : chords})
 
 class KeyView_C(ListView):
     model = Chords
@@ -47,7 +47,7 @@ class KeyView_C(ListView):
         key = "chord_Generator/keys/C.txt"
         chord = generate_chords(key)
         chords = chord
-        return render(request, '/Users/patrickkelly/Desktop/Projects_2020/spring_intensive/chord_Generator/templates/home.html',{'chords' : chords})
+        return render(request, 'home.html',{'chords' : chords})
 
 class KeyView_Db(ListView):
     model = Chords
@@ -55,7 +55,7 @@ class KeyView_Db(ListView):
         key = "chord_Generator/keys/C#Db.txt"
         chord = generate_chords(key)
         chords = chord
-        return render(request, '/Users/patrickkelly/Desktop/Projects_2020/spring_intensive/chord_Generator/templates/home.html',{'chords' : chords})
+        return render(request, 'home.html',{'chords' : chords})
 
 class KeyView_D(ListView):
     model = Chords
@@ -63,7 +63,7 @@ class KeyView_D(ListView):
         key = "chord_Generator/keys/D.txt"
         chord = generate_chords(key)
         chords = chord
-        return render(request, '/Users/patrickkelly/Desktop/Projects_2020/spring_intensive/chord_Generator/templates/home.html',{'chords' : chords})
+        return render(request, 'home.html',{'chords' : chords})
 
 class KeyView_Eb(ListView):
     model = Chords
@@ -71,7 +71,7 @@ class KeyView_Eb(ListView):
         key = "chord_Generator/keys/D#Eb.txt"
         chord = generate_chords(key)
         chords = chord
-        return render(request, '/Users/patrickkelly/Desktop/Projects_2020/spring_intensive/chord_Generator/templates/home.html',{'chords' : chords})
+        return render(request, 'home.html',{'chords' : chords})
 
 class KeyView_E(ListView):
     model = Chords
@@ -79,7 +79,7 @@ class KeyView_E(ListView):
         key = "chord_Generator/keys/E.txt"
         chord = generate_chords(key)
         chords = chord
-        return render(request, '/Users/patrickkelly/Desktop/Projects_2020/spring_intensive/chord_Generator/templates/home.html',{'chords' : chords})
+        return render(request, 'home.html',{'chords' : chords})
 
 class KeyView_F(ListView):
     model = Chords
@@ -87,7 +87,7 @@ class KeyView_F(ListView):
         key = "chord_Generator/keys/F.txt"
         chord = generate_chords(key)
         chords = chord
-        return render(request, '/Users/patrickkelly/Desktop/Projects_2020/spring_intensive/chord_Generator/templates/home.html',{'chords' : chords})
+        return render(request, 'home.html',{'chords' : chords})
 
 class KeyView_Gb(ListView):
     model = Chords
@@ -95,7 +95,7 @@ class KeyView_Gb(ListView):
         key = "chord_Generator/keys/F#Gb.txt"
         chord = generate_chords(key)
         chords = chord
-        return render(request, '/Users/patrickkelly/Desktop/Projects_2020/spring_intensive/chord_Generator/templates/home.html',{'chords' : chords})
+        return render(request, 'home.html',{'chords' : chords})
 
 class KeyView_G(ListView):
     model = Chords
@@ -103,7 +103,7 @@ class KeyView_G(ListView):
         key = "chord_Generator/keys/G.txt"
         chord = generate_chords(key)
         chords = chord
-        return render(request, '/Users/patrickkelly/Desktop/Projects_2020/spring_intensive/chord_Generator/templates/home.html',{'chords' : chords})
+        return render(request, 'home.html',{'chords' : chords})
 
 class KeyView_Ab(ListView):
     model = Chords
@@ -111,4 +111,4 @@ class KeyView_Ab(ListView):
         key = "chord_Generator/keys/G#Ab.txt"
         chord = generate_chords(key)
         chords = chord
-        return render(request, '/Users/patrickkelly/Desktop/Projects_2020/spring_intensive/chord_Generator/templates/home.html',{'chords' : chords})
+        return render(request, 'home.html',{'chords' : chords})
