@@ -112,3 +112,4 @@ class KeyView_Ab(ListView):
         chord = generate_chords(key)
         chords = chord
         return render(request, '/Users/patrickkelly/Desktop/Projects_2020/spring_intensive/chord_Generator/templates/home.html',{'chords' : chords})
+        
