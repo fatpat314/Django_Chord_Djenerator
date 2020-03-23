@@ -26,15 +26,14 @@
             <div class="text-white">Hello, <strong>{{user.username}}</strong> Choose a key </div>
             {% else %}
 
-            <div class="text-white">Choose a key </div>
+            <div class="text-white"><h3>Choose a key</h3></div>
 
             {% endif %}
 
 
 
             <form class="" method="get">
-                <label class="text-white" for="quantity">Choose how many chords you need:</label>
-                <input type="number" id="quantity" name="quantity" min="1" max="24"><br>
+                
 
                 <button class="btn btn-primary ml-4" formaction="/A/">A</button>
                 <button class="btn btn-secondary ml-4" formaction="/Bb/">A#Bb</button>
@@ -48,6 +47,10 @@
                 <button class="btn btn-secondary ml-4" formaction="/Gb/">F#Gb</button>
                 <button class="btn btn-primary ml-4" formaction="/G/">G</button>
                 <button class="btn btn-secondary ml-4" formaction="/Ab/">G#Ab</button>
+
+                <label class="text-white ml-4" for="quantity">Choose how many chords you need:</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="24"><br>
+
 
 
 
