@@ -30,7 +30,10 @@ class MarkovChord:
 
         chord_chart = ""
 
-        for i in range(num_chords):
+        if num_chords == "":
+            num_chords = "8"
+
+        for i in range(int(num_chords)):
             chord_chart += chord + " "
             chordogram = self.markov_chain[chord]
 
