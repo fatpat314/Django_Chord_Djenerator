@@ -1,6 +1,6 @@
 from django.urls import include, path
 
-from chord_Generator.views import ChordAmountView, KeyView_A, KeyView_Bb, KeyView_B, KeyView_C, KeyView_Db, KeyView_D, KeyView_Eb, KeyView_E, KeyView_F, KeyView_Gb, KeyView_G, KeyView_Ab
+from chord_Generator.views import ChordAmountView, KeyView_A, KeyView_Bb, KeyView_B, KeyView_C, KeyView_Db, KeyView_D, KeyView_Eb, KeyView_E, KeyView_F, KeyView_Gb, KeyView_G, KeyView_Ab, ChordView
 
 urlpatterns = [
     path('', ChordAmountView.as_view(), name='chords'),
@@ -16,6 +16,8 @@ urlpatterns = [
     path('Gb/', KeyView_Gb.as_view(), name='F#Gb'),
     path('G/', KeyView_G.as_view(), name='G'),
     path('Ab/', KeyView_Ab.as_view(), name='G#Ab'),
+
+    # path('<str:slug>/', ChordView.as_view(), name='chord')
 
 ]
 """And so on, there must be a better way"""

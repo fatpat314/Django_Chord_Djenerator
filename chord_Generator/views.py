@@ -9,15 +9,26 @@ from chord_Generator.app import generate_chords
 
 amount = 8
 # Create your views here.
+
+class ChordView(ListView):
+    model = Chords
+    def get(self,request):
+        print("test1")
+        quantity = request.GET['quantity']
+        key = "chord_Generator/keys/{{ chord }}.txt"
+        chord = generate_chords(key, quantity)
+        chords = chord
+        #split = chord...
+        print("test1")
+        return render(request, 'home.html',{'chords' : chords})
+
+
+
 class ChordAmountView(ListView):
     model = Chords
 
     def get(self,request):
-        # key = "chord_Generator/keys/chord_list.txt"
-        #
-        #
-        # chord = generate_chords(key, quantity)
-        # chords = chord
+
         return render(request, 'splash.html')
 
 class KeyView_A(ListView):
@@ -30,6 +41,7 @@ class KeyView_A(ListView):
         key = "chord_Generator/keys/A.txt"
         chord = generate_chords(key, quantity)
         chords = chord
+        split = ''.join(str(e) for e in chords)
         return render(request, 'home.html',{'chords' : chords})
 
 class KeyView_Bb(ListView):
