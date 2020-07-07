@@ -4,7 +4,7 @@ from chord_Generator.markov_chord import MarkovChord
 
 # app = Flask(__name__)
 
-# test check
+"""git check"""
 # @app.route('/')
 def generate_chords(key, amount):
     my_file = open(key) #make this based off the slug
