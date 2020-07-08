@@ -1,47 +1,19 @@
-FROM library/python:3.7-alpine as base
-FROM base as builder
+FROM python:3.7
 
-RUN mkdir /install
+RUN mkdir /app
+WORKDIR /app
 
-WORKDIR /install
+ADD . /app/
 
+ENV PYTHONUNBUFFERED 1
+ENV LANG C.UTF-8
+ENV DEBIAN_FRONTEND=noninteractive
 
+ENV PORT=8000
 
-ENV LIBRARY_PATH=/lib:/usr/lib
+RUN pip install -r requirements.txt
 
-COPY requirements.txt /requirements.txt
-
-RUN python -m pip install --install-option="--prefix=/install" -r /requirements.txt
-
-
-
-FROM base
-
-COPY --from=builder /install /usr/local
-
-RUN apk --no-cache --quiet add libpq
-
-ENV PROJECT_PATH=/usr/src/app
-
-RUN echo "Installing into $PROJECT_PATH..."
-
-RUN mkdir -p $PROJECT_PATH
-
-RUN mkdir -p $PROJECT_PATH/media
-RUN mkdir -p $PROJECT_PATH/static/assets
-
-# We need a .env file to start the server.
-#COPY deploy/.env.captain $PROJECT_PATH/.env
-RUN touch $PROJECT_PATH/.env
-
-# Run all commands in this new directory.
-WORKDIR $PROJECT_PATH
-
-# Copy this directory to the image.
-COPY . $PROJECT_PATH
-
-# Open port 80 to traffic.
-EXPOSE 8080
+EXPOSE 8000
 
 # Run a startup script in the specified directory.
-CMD ["python", "manage.py", "runserver"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
