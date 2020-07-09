@@ -25,7 +25,7 @@ SECRET_KEY = 'p7noy(%(lf3r7zx+r4mw7*+&-5^ye5!8z)f0$8+%dgp@6eh1iu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'chord-generator-pk.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', 'chord-generator-pk.herokuapp.com', '127.0.0.1', 'docker-chord-gen.dev.patrickkelly.org']
 
 
 # Application definition
